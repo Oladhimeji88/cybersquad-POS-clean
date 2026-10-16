@@ -31,3 +31,6 @@ dist/
 
 # vercel
 .vercel
+
+.env
+.env.local

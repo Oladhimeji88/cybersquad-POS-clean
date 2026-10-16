@@ -24,7 +24,6 @@ yarn-error.log*
 
 # macOS specific
 .DS_Store
-config.bat
 
 
 node_modules/

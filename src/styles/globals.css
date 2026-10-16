@@ -1,0 +1,448 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  
+  /* Brand Color Palette - Primary Purple */
+  --purple-50: #f5f3ff;
+  --purple-100: #ede9fe;
+  --purple-200: #ddd6fe;
+  --purple-300: #c4b5fd;
+  --purple-400: #a78bfa;
+  --purple-500: #8b5cf6;
+  --purple-600: #7c3aed;
+  --purple-700: #6d28d9;
+  --purple-800: #5b21b6;
+  --purple-900: #4c1d95;
+  
+  /* Secondary Pink/Magenta */
+  --pink-50: #fdf2f8;
+  --pink-100: #fce7f3;
+  --pink-200: #fbcfe8;
+  --pink-300: #f9a8d4;
+  --pink-400: #f472b6;
+  --pink-500: #ec4899;
+  --pink-600: #db2777;
+  --pink-700: #be185d;
+  --pink-800: #9d174d;
+  --pink-900: #831843;
+  
+  /* Greyscale */
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+  
+  /* Alert Colors */
+  --success-50: #f0fdfa;
+  --success-500: #14b8a6;
+  --success-700: #0f766e;
+  
+  --warning-50: #fffbeb;
+  --warning-500: #f59e0b;
+  --warning-700: #b45309;
+  
+  --error-50: #fef2f2;
+  --error-500: #ef4444;
+  --error-700: #b91c1c;
+  
+  /* Cyan Accent */
+  --cyan-50: #ecfeff;
+  --cyan-200: #a5f3fc;
+  --cyan-500: #06b6d4;
+  
+  /* Theme Variables */
+  --background: #ffffff;
+  --foreground: var(--gray-900);
+  --card: #ffffff;
+  --card-foreground: var(--gray-900);
+  --popover: #ffffff;
+  --popover-foreground: var(--gray-900);
+  --primary: var(--purple-600);
+  --primary-foreground: #ffffff;
+  --secondary: var(--pink-100);
+  --secondary-foreground: var(--pink-900);
+  --muted: var(--gray-100);
+  --muted-foreground: var(--gray-500);
+  --accent: var(--purple-100);
+  --accent-foreground: var(--purple-900);
+  --destructive: var(--error-500);
+  --destructive-foreground: #ffffff;
+  --border: var(--gray-200);
+  --input: transparent;
+  --input-background: var(--gray-50);
+  --switch-background: var(--gray-300);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: var(--purple-600);
+  --chart-1: var(--purple-500);
+  --chart-2: var(--cyan-500);
+  --chart-3: var(--pink-500);
+  --chart-4: var(--success-500);
+  --chart-5: var(--warning-500);
+  --radius: 0.625rem;
+  --sidebar: var(--gray-50);
+  --sidebar-foreground: var(--gray-900);
+  --sidebar-primary: var(--purple-600);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: var(--purple-50);
+  --sidebar-accent-foreground: var(--purple-900);
+  --sidebar-border: var(--gray-200);
+  --sidebar-ring: var(--purple-600);
+}
+
+.dark {
+  --background: var(--gray-900);
+  --foreground: var(--gray-50);
+  --card: var(--gray-800);
+  --card-foreground: var(--gray-50);
+  --popover: var(--gray-800);
+  --popover-foreground: var(--gray-50);
+  --primary: var(--purple-500);
+  --primary-foreground: #ffffff;
+  --secondary: var(--gray-700);
+  --secondary-foreground: var(--gray-50);
+  --muted: var(--gray-700);
+  --muted-foreground: var(--gray-400);
+  --accent: var(--purple-900);
+  --accent-foreground: var(--purple-100);
+  --destructive: var(--error-700);
+  --destructive-foreground: var(--error-50);
+  --border: var(--gray-700);
+  --input: var(--gray-700);
+  --ring: var(--purple-500);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: var(--purple-400);
+  --chart-2: var(--cyan-500);
+  --chart-3: var(--pink-400);
+  --chart-4: var(--success-500);
+  --chart-5: var(--warning-500);
+  --sidebar: var(--gray-800);
+  --sidebar-foreground: var(--gray-50);
+  --sidebar-primary: var(--purple-500);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: var(--gray-700);
+  --sidebar-accent-foreground: var(--gray-50);
+  --sidebar-border: var(--gray-700);
+  --sidebar-ring: var(--purple-500);
+}
+
+@theme inline {
+  /* Loaded via @fontsource/plus-jakarta-sans in src/index.css (400/500/600/700).
+     Drives Tailwind's font-sans utility and, since nothing else sets a
+     font-family, the base body font for the whole app. */
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+
+  /* Brand Purple Gradient */
+  --color-purple-50: var(--purple-50);
+  --color-purple-100: var(--purple-100);
+  --color-purple-200: var(--purple-200);
+  --color-purple-300: var(--purple-300);
+  --color-purple-400: var(--purple-400);
+  --color-purple-500: var(--purple-500);
+  --color-purple-600: var(--purple-600);
+  --color-purple-700: var(--purple-700);
+  --color-purple-800: var(--purple-800);
+  --color-purple-900: var(--purple-900);
+  
+  /* Pink/Magenta */
+  --color-pink-50: var(--pink-50);
+  --color-pink-100: var(--pink-100);
+  --color-pink-200: var(--pink-200);
+  --color-pink-300: var(--pink-300);
+  --color-pink-400: var(--pink-400);
+  --color-pink-500: var(--pink-500);
+  --color-pink-600: var(--pink-600);
+  --color-pink-700: var(--pink-700);
+  --color-pink-800: var(--pink-800);
+  --color-pink-900: var(--pink-900);
+  
+  /* Gray */
+  --color-gray-50: var(--gray-50);
+  --color-gray-100: var(--gray-100);
+  --color-gray-200: var(--gray-200);
+  --color-gray-300: var(--gray-300);
+  --color-gray-400: var(--gray-400);
+  --color-gray-500: var(--gray-500);
+  --color-gray-600: var(--gray-600);
+  --color-gray-700: var(--gray-700);
+  --color-gray-800: var(--gray-800);
+  --color-gray-900: var(--gray-900);
+  
+  /* Alert Colors */
+  --color-success: var(--success-500);
+  --color-warning: var(--warning-500);
+  --color-error: var(--error-500);
+  --color-cyan: var(--cyan-500);
+  
+  /* Theme Variables */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+/* src/frontdesk/styles/frontdesk.css is a frozen, generated legacy
+   stylesheet (see comments elsewhere referencing it) that sets
+   .frontdesk-theme { font-family: Outfit... } as plain unlayered CSS with no
+   !important. Unlayered author CSS always beats anything inside @layer
+   base regardless of specificity or import order, so the body{@apply
+   font-sans} rule above never wins on any page that adds the
+   "frontdesk-theme" class to <body> (the login page and every frontdesk/POS
+   route). This is the only reliable way to override it. */
+.frontdesk-theme {
+  font-family: var(--font-sans) !important;
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    /* Type scale. Sizes step 24 / 20 / 18 / 16 and every line height sits on the 4px baseline (32, 28, 28, 24),
+       so stacked text keeps the same vertical rhythm as the 8pt spacing. Headings are semibold, body copy regular. */
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: 600;
+      line-height: 2rem;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: 600;
+      line-height: 1.75rem;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: 600;
+      line-height: 1.75rem;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: 600;
+      line-height: 1.5rem;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5rem;
+    }
+
+    /* Labels and buttons use the 14px control size so they match inputs and table text. */
+    label {
+      font-size: var(--text-sm);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.25rem;
+    }
+
+    button {
+      font-size: var(--text-sm);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.25rem;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5rem;
+    }
+  }
+}
+
+@layer base {
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4 {
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Plain <select> elements share the look of inputs. :where() keeps this at zero specificity, so any
+     class on a select (or the Select component) still wins. */
+  :where(select) {
+    height: 2.5rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    background-color: var(--background);
+    padding-inline: 1rem;
+    font-size: var(--text-sm);
+    line-height: 1.25rem;
+    color: var(--foreground);
+  }
+  :where(select):focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+
+  /* Numbers line up in columns and totals. */
+  table, [data-slot="table"], .tabular-nums-all {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+
+.bg-warning {
+  background-color: #f97316; /* orange-ish */
+}
+/* ---------------------------------------------------------------------------
+   Design tokens: 8pt spacing scale and motion.
+   Spacing: use Tailwind steps that are multiples of 8px (2 = 8px, 4 = 16px, 6 = 24px, 8 = 32px,
+   10 = 40px, 12 = 48px). 4px (step 1) is allowed only for tight icon-to-label gaps.
+   Motion: short, ease-out, transform and opacity only, so it never causes layout shift.
+   --------------------------------------------------------------------------- */
+:root {
+  --space-unit: 8px;
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-fast: 150ms;
+  --motion-base: 240ms;
+  --motion-slow: 360ms;
+}
+
+@keyframes motion-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes motion-rise {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes motion-pop {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: none; }
+}
+
+.motion-fade { animation: motion-fade var(--motion-base) var(--ease-out) both; }
+.motion-rise { animation: motion-rise var(--motion-base) var(--ease-out) both; }
+.motion-pop { animation: motion-pop var(--motion-fast) var(--ease-out) both; }
+
+/* Children enter one after another; capped so long lists don't feel slow. */
+.motion-stagger > * { animation: motion-rise var(--motion-base) var(--ease-out) both; }
+.motion-stagger > *:nth-child(2) { animation-delay: 40ms; }
+.motion-stagger > *:nth-child(3) { animation-delay: 80ms; }
+.motion-stagger > *:nth-child(4) { animation-delay: 120ms; }
+.motion-stagger > *:nth-child(5) { animation-delay: 160ms; }
+.motion-stagger > *:nth-child(n + 6) { animation-delay: 200ms; }
+
+/* Pressable controls get a small, quick press response. */
+.press {
+  transition: transform var(--motion-fast) var(--ease-out), background-color var(--motion-fast) var(--ease-out),
+    border-color var(--motion-fast) var(--ease-out), box-shadow var(--motion-fast) var(--ease-out);
+}
+.press:active:not(:disabled) { transform: scale(0.97); }
+
+/* Hover lift for clickable cards. */
+.lift {
+  transition: transform var(--motion-base) var(--ease-out), box-shadow var(--motion-base) var(--ease-out);
+}
+.lift:hover { transform: translateY(-2px); box-shadow: 0 8px 24px -8px rgb(0 0 0 / 0.18); }
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-fade, .motion-rise, .motion-pop, .motion-stagger > * { animation: none; }
+  .press, .lift { transition: none; }
+  .press:active:not(:disabled), .lift:hover { transform: none; }
+}
+
+/* One stroke weight for every lucide icon so icons read as a single set. */
+svg.lucide { stroke-width: 1.75; }
+
+/* ---------------------------------------------------------------------------
+   Login page layout. Plain CSS with its own class names because the frozen frontdesk stylesheet
+   sets display and direction utilities at a higher specificity than responsive Tailwind classes.
+   The image always shows: a banner above the form on small screens, a half-width panel from 1024px.
+   --------------------------------------------------------------------------- */
+.login-shell { min-height: 100vh; display: flex; flex-direction: column; background: hsl(var(--background)); }
+.login-hero { position: relative; display: flex; align-items: flex-end; justify-content: center; height: 240px; overflow: hidden; background: var(--muted); }
+.login-hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; }
+.login-hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgb(0 0 0 / 0.6), transparent 60%); }
+.login-tagline { display: none; position: relative; z-index: 1; margin: 0; max-width: 448px; padding: 24px; text-align: center; color: #fff; font-size: 14px; line-height: 20px; }
+.login-panel { flex: 1; display: flex; align-items: center; justify-content: center; padding: 32px 24px; }
+@media (min-width: 640px) { .login-hero { height: 320px; } }
+@media (min-width: 1024px) {
+  .login-shell { flex-direction: row; }
+  .login-hero { width: 50%; height: auto; }
+  .login-hero img { object-position: center; }
+  .login-tagline { display: block; font-size: 16px; line-height: 24px; }
+  .login-tagline { padding: 48px; }
+  .login-panel { padding: 48px; }
+}
+
+/* The frozen frontdesk stylesheet sets border colours at a higher specificity than Tailwind's data-state
+   variants, which left the selected tab almost invisible on frontdesk, POS and operations pages. */
+.frontdesk-theme [data-slot="tabs-trigger"][data-state="active"] {
+  /* Inside .frontdesk-theme the colour tokens are bare HSL triples, so they need hsl() around them. */
+  border-color: hsl(var(--primary));
+  background-color: hsl(var(--primary) / 0.1);
+  color: hsl(var(--primary));
+}

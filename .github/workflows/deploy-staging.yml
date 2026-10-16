@@ -1,0 +1,23 @@
+name: Deploy Staging
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Execute Deployment Commands on Server
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.STAGING_HOST }}
+          username: root
+          key: ${{ secrets.STAGING_SSH_KEY }}
+          script: |
+            cd /var/www/cybersquad-admin
+            git fetch origin dev
+            git reset --hard origin/dev
+            /root/.nvm/versions/node/v20.19.6/bin/npm install --force
+            systemctl restart cyberquad-admin.service

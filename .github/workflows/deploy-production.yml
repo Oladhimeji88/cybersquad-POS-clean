@@ -1,0 +1,23 @@
+name: Deploy Production
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Execute Deployment Commands on Server
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.PRODUCTION_HOST }}
+          username: root
+          key: ${{ secrets.PRODUCTION_SSH_KEY }}
+          script: |
+            cd /var/www/cybersquad-admin
+            git fetch origin main
+            git reset --hard origin/main
+            /root/.nvm/versions/node/v20.19.6/bin/npm install --force
+            systemctl restart cyberquad-admin.service

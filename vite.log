@@ -1,0 +1,8 @@
+(node:80055) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+  VITE v6.3.5  ready in 5569 ms
+
+  ➜  Local:   http://127.0.0.1:3000/
+9:15:28 AM [vite] (client) page reload .vscode/settings.json
+9:17:49 AM [vite] (client) page reload vite.log
